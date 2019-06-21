@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <!-- The Navigation Graph for this app. -->
+
+    <!-- Time picker. -->
+    <dialog
+        android:id="@+id/time_picker_dialog"
+        android:name="com.srijal.bottomnavigation.fragment.TimePickerFragment"
+        android:label="time_picker">
+
+        <argument
+            android:name="hour"
+            app:argType="integer" />
+
+        <argument
+            android:name="minute"
+            app:argType="integer" />
+
+    </dialog>
+
+    <!-- Home screen -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.srijal.bottomnavigation.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/time_picker_action"
+            app:destination="@+id/time_picker_dialog" />
+    </fragment>
+
+    <!-- Dashboard screen -->
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.srijal.bottomnavigation.fragment.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/confirmation_action"
+            app:destination="@id/navigation_confirmation" />
+    </fragment>
+
+    <!-- Notifications screen -->
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.srijal.bottomnavigation.fragment.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- Confirmation screen -->
+    <dialog
+        android:id="@+id/navigation_confirmation"
+        android:name="com.srijal.bottomnavigation.fragment.ConfirmationFragment"
+        android:label="fragment_confirmation">
+
+        <argument
+            android:name="amount"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="receiver"
+            android:defaultValue="N/A"
+            app:argType="string" />
+
+        <argument
+            android:name="isExpress"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </dialog>
+</navigation>

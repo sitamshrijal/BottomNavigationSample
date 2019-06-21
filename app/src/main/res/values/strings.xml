@@ -1,0 +1,21 @@
+<resources>
+    <!-- Strings that do not require translation. -->
+    <string name="app_name" translatable="false">Navigation</string>
+
+    <!-- Translatable strings. -->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="home_message">This is your Home. Use bottom navigation to switch pages.</string>
+    <string name="notifications_message">Your notifications.</string>
+
+    <string name="specify_amount">Specify amount</string>
+    <string name="send">Send</string>
+
+    <string name="open_notifications">See all notifications</string>
+
+    <string name="express_transfer">Express transfer</string>
+
+    <string name="confirm_transfer">Send &lt;b>%1$s&lt;/b> to &lt;b>%2$s&lt;/b> (%3$s)?</string>
+</resources>
