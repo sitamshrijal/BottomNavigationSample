@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         bottom_navigation.setupWithNavController(navController)
 
         // Show & return a BadgeDrawable
-        val badge = bottom_navigation.showBadge(R.id.navigation_notifications)
+        val badge = bottom_navigation.getOrCreateBadge(R.id.navigation_notifications)
+        badge.isVisible = true
     }
 }
